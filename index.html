@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMIR AZZAM - Automation & Control Engineering Student</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="portfolio-style.css">
+    <style>
+        /* Fix for placeholder rectangles */
+        .certificate-placeholder {
+            position: relative;
+            min-height: auto;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .certificate-placeholder img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+        
+        .certificate-placeholder img[src*="placeholder"] {
+            min-height: 200px;
+            background: #f0f0f0;
+        }
+        
+        .placeholder-text {
+            display: none;
+        }
+        
+        .media-placeholder {
+            background: transparent;
+            min-height: auto;
+            padding: 0;
+        }
+        
+        .media-placeholder img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+        
+        .media-placeholder img[src*="placeholder"] {
+            min-height: 150px;
+            background: #f0f0f0;
+        }
+        
+        .media-grid-2, .media-grid-4 {
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Amir AZZAM</div>
+        <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="#education" onclick="closeMobileMenu()">Education</a></li>
+            <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+            <li><a href="#internships" onclick="closeMobileMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+            <li><a href="#activities" onclick="closeMobileMenu()">Activities</a></li>
+            <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <h1>Hello<span class="dot">.</span></h1>
+                <h2>I'm Amir AZZAM</h2>
+                <h3>Automation & Control Engineering Student</h3>
+                <p class="hero-subtitle">Passionate about industrial systems, robotics, and intelligent control</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToContact()">Got a project?</button>
+                    <button class="btn-secondary" onclick="downloadCV()">Download CV</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="decorative-bracket bracket-left">&lt;</div>
+                <div class="profile-circle">
+                    <img src="photo de profile romove.png" alt="Amir AZZAM Profile" onerror="this.src='https://via.placeholder.com/400x400/1e3a8a/ffffff?text=Amir+AZZAM'">
+                </div>
+                <div class="decorative-bracket bracket-right">&gt;</div>
+            </div>
+        </div>
+        <div class="tech-stack">
+            <span>MATLAB</span>
+            <span>C/C++</span>
+            <span>LaTeX</span>
+            <span>SOLIDWORKS</span>
+            <span>Control Systems</span>
+            <span>Embedded Systems</span>
+            <span>Robotics</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="section-divider"></div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am an Automation and Control Engineering student with a strong passion for industrial systems, 
+                        robotics, and applied engineering. I enjoy working on practical technical projects that combine 
+                        electronics, programming, and control theory to solve real-world problems.
+                    </p>
+                    <p>
+                        I am particularly interested in industrial automation, embedded systems, and intelligent control, 
+                        and I aim to build a career that connects engineering innovation with real industrial applications.
+                    </p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h4>Top 5%</h4>
+                        <p>National Ranking</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h4>Multiple</h4>
+                        <p>Technical Projects</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                        <h4>4+</h4>
+                        <p>Professional Experiences</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-language"></i></div>
+                        <h4>3</h4>
+                        <p>Languages</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="section-divider"></div>
+            
+            <div class="education-timeline">
+                <!-- State Engineer's Degree -->
+                <div class="education-item">
+                    <div class="education-year">2023 – 2028</div>
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3>State Engineer's Degree in Automation</h3>
+                            <span class="education-status">Expected</span>
+                        </div>
+                        <p class="education-school">National Polytechnic School (ENP)</p>
+                        <p class="education-description">
+                            Specialized engineering program in Control and Automation Engineering, covering:
+                        </p>
+                        <ul class="education-topics">
+                            <li>Industrial Computing</li>
+                            <li>Control Systems</li>
+                            <li>Digital Systems</li>
+                            <li>Advanced Control</li>
+                            <li>Industrial Process Control</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Integrated Preparatory Cycle -->
+                <div class="education-item">
+                    <div class="education-year">2023 – 2025</div>
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3>Integrated Preparatory Cycle</h3>
+                        </div>
+                        <p class="education-school">High National School of Public Works – Kouba</p>
+                        <p class="education-description">
+                            Intensive preparatory program in Mathematics, Physics, and Engineering Sciences.
+                            <strong>Ranked in the Top 5%</strong> in the national competitive exam for the engineering cycle.
+                        </p>
+                        <div class="education-certificate">
+                            <div class="certificate-placeholder">
+                                <img src="certificate enp.png" alt="Preparatory Cycle Certificate" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Certificate+Not+Found'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baccalaureate -->
+                <div class="education-item">
+                    <div class="education-year">2023</div>
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3>Baccalaureate in Science</h3>
+                        </div>
+                        <p class="education-school">Les Glycines High School</p>
+                        <p class="education-description">
+                            Graduated with an average score of <strong>15.80 / 20</strong>
+                        </p>
+                        <div class="education-certificate">
+                            <div class="certificate-placeholder">
+                                <img src="certifacate bac.png" alt="Baccalaureate Certificate" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Certificate+Not+Found'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="section-divider"></div>
+
+            <div class="skills-container">
+                <!-- Industrial Automation & Control -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-cog"></i> Industrial Automation & Control</h3>
+                    <div class="skill-note">Currently developing practical knowledge through academic training and future projects.</div>
+                </div>
+
+                <!-- Programming -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming & Software Development</h3>
+                    <div class="category-skills">
+                        <div class="skill-item glass">
+                            <div class="skill-header">
+                                <span class="skill-name">C</span>
+                                <span class="skill-percentage">20%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width:20%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item glass">
+                            <div class="skill-header">
+                                <span class="skill-name">C++</span>
+                                <span class="skill-percentage">40%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width:40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scientific Computing -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> Scientific Computing & Simulation</h3>
+                    <div class="category-skills">
+                        <div class="skill-item glass">
+                            <div class="skill-header">
+                                <span class="skill-name">MATLAB / Simulink</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width:70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item glass">
+                            <div class="skill-header">
+                                <span class="skill-name">GNU Octave</span>
+                                <span class="skill-percentage">40%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width:40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CAD Design -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-drafting-compass"></i> CAD / Mechanical & Technical Design</h3>
+                    <div class="category-skills">
+                        <div class="skill-item glass">
+                            <div class="skill-header">
+                                <span class="skill-name">SOLIDWORKS</span>
+                                <span class="skill-percentage">30%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width:30%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documentation -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-file-alt"></i> Technical Documentation & Typesetting</h3>
+                    <div class="category-skills">
+                        <div class="skill-item glass">
+                            <div class="skill-header">
+                                <span class="skill-name">LaTeX</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width:80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item glass">
+                            <div class="skill-header">
+                                <span class="skill-name">PowerPoint / Canva</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width:85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-users"></i> Soft Skills</h3>
+                    <div class="soft-skills-grid">
+                        <div class="soft-skill-badge">Leadership</div>
+                        <div class="soft-skill-badge">Communication</div>
+                        <div class="soft-skill-badge">Teamwork</div>
+                        <div class="soft-skill-badge">Creative Thinking</div>
+                        <div class="soft-skill-badge">Problem-Solving</div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-language"></i> Languages</h3>
+                    <div class="languages-grid">
+                        <div class="language-item">
+                            <span class="language-name">Arabic</span>
+                            <span class="language-level">Native</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name">English</span>
+                            <span class="language-level">B2</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name">French</span>
+                            <span class="language-level">B1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internships Section -->
+    <section id="internships" class="internships-section">
+        <div class="container">
+            <h2 class="section-title">Internships & Professional Experience</h2>
+            <div class="section-divider"></div>
+
+            <div class="internships-grid">
+                <!-- PROPHARMAL Internship -->
+                <div class="internship-card featured">
+                    <div class="internship-header">
+                        <div class="internship-icon"><i class="fas fa-industry"></i></div>
+                        <div>
+                            <h3>Industrial Internship</h3>
+                            <p class="company-name">PROPHARMAL (Pharmaceutical Company)</p>
+                        </div>
+                    </div>
+                    <p class="internship-description">
+                        Completed a technical internship where I was introduced to industrial electricity and 
+                        basic control systems used in pharmaceutical production environments.
+                    </p>
+                    <div class="internship-media">
+                        <div class="media-grid-2">
+                            <div class="media-placeholder">
+                                <img src="5791683259321226902_121.jpg" alt="PROPHARMAL Internship Photo 1" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Photo+Not+Found'">
+                            </div>
+                            <div class="media-placeholder">
+                                <img src="production affervisent.png" alt="PROPHARMAL Internship Photo 2" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Photo+Not+Found'">
+                            </div>
+                        </div>
+                        <!-- FIXED: PDF Report Button with working function -->
+                        <button class="btn-report" onclick="openPDF('AZZAM-Amir-Rapport-de-stage1.pdf')">
+                            <i class="fas fa-file-pdf"></i> View Internship Report
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quality Control Assistant -->
+                <div class="internship-card">
+                    <div class="internship-header">
+                        <div class="internship-icon"><i class="fas fa-check-circle"></i></div>
+                        <div>
+                            <h3>Quality Control Assistant</h3>
+                            <p class="company-name">Sofa Manufacturing Factory</p>
+                            <span class="internship-period">Summer 2021 – 2022</span>
+                        </div>
+                    </div>
+                    <p class="internship-description">
+                        Worked in product inspection and quality monitoring, ensuring manufacturing standards were respected.
+                    </p>
+                    <div class="internship-media">
+                        <div class="media-placeholder single">
+                            <img src="manzily certificate.png" alt="Quality Control Work" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Photo+Not+Found'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sales Representative -->
+                <div class="internship-card">
+                    <div class="internship-header">
+                        <div class="internship-icon"><i class="fas fa-handshake"></i></div>
+                        <div>
+                            <h3>Sales Representative</h3>
+                            <p class="company-name">Private Company</p>
+                        </div>
+                    </div>
+                    <p class="internship-description">
+                        Gained experience in customer communication, negotiation, and product presentation.
+                    </p>
+                    <div class="internship-media">
+                        <div class="media-placeholder single">
+                            <img src="sales.png" alt="Sales Experience" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Photo+Not+Found'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workshop Supervisor -->
+                <div class="internship-card">
+                    <div class="internship-header">
+                        <div class="internship-icon"><i class="fas fa-hard-hat"></i></div>
+                        <div>
+                            <h3>Workshop Supervisor</h3>
+                        </div>
+                    </div>
+                    <p class="internship-description">
+                        Supervised workflow, coordinated tasks, and ensured safety and efficiency in a workshop environment.
+                    </p>
+                    <div class="internship-media">
+                        <div class="media-placeholder single">
+                            <img src="chef.png" alt="Workshop Supervisor" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Photo+Not+Found'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="section-divider"></div>
+
+            <div class="projects-grid">
+                <!-- ROBOKO Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>ROBOKO Robotics Challenge</h3>
+                        <div class="project-tags">
+                            <span class="tag">Robotics</span>
+                            <span class="tag">Team Project</span>
+                            <span class="tag">Problem Solving</span>
+                            <span class="tag">IEEE ENP</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        ROBOKO is a robotics competition organized by the IEEE Student Branch at the École Nationale Polytechnique d'Alger. 
+                        Our team designed and worked on a robot under strict time constraints, which required strong teamwork, 
+                        critical thinking, and fast technical problem-solving.
+                    </p>
+                    <div class="project-media">
+                        <div class="media-grid">
+                            <div class="media-placeholder">
+                                <img src="roboko photo.jpg" alt="ROBOKO Robot" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Photo+Not+Found'">
+                            </div>
+                            <div class="media-placeholder video">
+                                <video controls>
+                                    <source src="roboko video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rain-Activated Wiper System -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Automatic Rain-Activated Wiper System</h3>
+                        <div class="project-tags">
+                            <span class="tag">Embedded Systems</span>
+                            <span class="tag">Electronics</span>
+                            <span class="tag">Integrated Circuits</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Designed a system that automatically activates a wiper mechanism when rain is detected using water 
+                        sensors and integrated electronic circuits. The project focused on sensor integration, signal 
+                        processing, and basic control logic.
+                    </p>
+                    <div class="project-media">
+                        <div class="media-grid">
+                            <div class="media-placeholder">
+                                <img src="sn photo.jpg" alt="Wiper System" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Photo+Not+Found'">
+                            </div>
+                            <div class="media-placeholder video">
+                                <video controls>
+                                    <source src="Automatic Rain-Sensing Wiper System.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAST Robotics Competition -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>FAST Robotics Competition — Autonomous Line Follower Robot</h3>
+                        <div class="project-tags">
+                            <span class="tag">Robotics</span>
+                            <span class="tag">ESP32</span>
+                            <span class="tag">PID Control</span>
+                            <span class="tag">Embedded Systems</span>
+                            <span class="tag">Competition</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        We participated in the FAST competition held at the Sidi Abdellah University Hub, where we designed 
+                        and developed a fully autonomous line follower robot. The system was built using an ESP32 microcontroller 
+                        and implemented a PID regulation algorithm to ensure precise trajectory tracking and stability. This project 
+                        allowed us to practically apply control theory concepts studied in our engineering curriculum, particularly 
+                        feedback systems, real-time correction, and parameter tuning. Through this challenge, we strengthened our 
+                        skills in embedded systems, sensor integration, algorithm optimization, and teamwork under competitive conditions.
+                    </p>
+                    <div class="project-media">
+                        <div class="media-grid-4">
+                            <div class="media-placeholder">
+                                <img src="fast_photo1.jpg" alt="FAST Robot Photo 1" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Photo+Not+Found'">
+                            </div>
+                            <div class="media-placeholder">
+                                <img src="fast_photo2.jpg" alt="FAST Robot Photo 2" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Photo+Not+Found'">
+                            </div>
+                            <div class="media-placeholder">
+                                <img src="fast_photo3.jpg" alt="FAST Robot Photo 3" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Photo+Not+Found'">
+                            </div>
+                            <div class="media-placeholder">
+                                <img src="fast_photo4.jpg" alt="FAST Robot Photo 4" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Photo+Not+Found'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section with Certificates -->
+    <section id="activities" class="activities-section">
+        <div class="container">
+            <h2 class="section-title">Extracurricular Activities & Awards</h2>
+            <div class="section-divider"></div>
+
+            <div class="activities-grid">
+                <!-- Scientific Club -->
+                <div class="activity-card">
+                    <div class="activity-icon"><i class="fas fa-flask"></i></div>
+                    <h3>Vision & Innovation Scientific Club</h3>
+                    <p class="activity-role">Department of Finance, Logistics, and External Relations</p>
+                    <p class="activity-description">
+                        Contributed to event organization, partnership communication, and logistical planning.
+                    </p>
+                    <div class="activity-certificate">
+                        <div class="certificate-placeholder">
+                            <img src="VIC_photo.jpg" alt="Scientific Club Certificate" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Certificate+Not+Found'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Equestrian Award -->
+                <div class="activity-card award">
+                    <div class="activity-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>1st Degree Certificate</h3>
+                    <p class="activity-role">Algerian Equestrian Federation</p>
+                    <p class="activity-description">
+                        Achieved first-degree certification in equestrian sports, demonstrating dedication and skill.
+                    </p>
+                    <div class="activity-certificate">
+                        <div class="certificate-placeholder">
+                            <img src="EQUASTRIEN.png" alt="Equestrian Certificate" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Certificate+Not+Found'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Islamic Studies Certificate (Arabic) -->
+                <div class="activity-card islamic-cert" dir="rtl">
+                    <div class="activity-icon"><i class="fas fa-book-quran"></i></div>
+                    <h3>شهادة في العلوم الشرعية — برنامج تاج الكرامة</h3>
+                    <p class="activity-role">مركز آيات بهنّة</p>
+                    <p class="activity-description">
+                        حصلت على شهادة إتمام برنامج تاج الكرامة من مركز آيات بهنّة، حيث شمل البرنامج دراسة منهجية في العلوم الشرعية 
+                        تضمنت التربية بالقرآن، ومبادئ التجويد، وأصول التفسير وعلوم القرآن، إضافة إلى تنمية مهارات التدبر والتدارس. 
+                        ساهمت هذه التجربة في تعزيز قدراتي على التحليل والفهم العميق للنصوص، وتنمية الانضباط الذاتي والالتزام، 
+                        وهي مهارات انعكست إيجابًا على أدائي الأكاديمي والشخصي.
+                    </p>
+                    <div class="activity-certificate">
+                        <div class="certificate-placeholder">
+                            <img src="شها.jpg" alt="Islamic Studies Certificate" onerror="this.src='https://via.placeholder.com/400x300/1e3a8a/ffffff?text=الشهادة+غير+موجودة'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Have a project?</h2>
+                    <h3>Let's talk!</h3>
+                    <p>I'm always interested in hearing about new opportunities and collaborations.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>amir.azzam@g.enp.edu.dz</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Algiers, Algeria</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" required></textarea>
+                        </div>
+
+                        <button type="button" class="btn-primary" onclick="handleSubmit()">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Amir AZZAM</h3>
+                <p>Automation & Control Engineering Student</p>
+                
+                <div class="social-icons">
+                    <a href="https://github.com/amirazzam-cpu" style="--color: #2b6cb0" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/amir-azzam-05a20a3b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" style="--color: #3b82f6" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/amiro.011?igsh=MTdrb2c2NWUxbmx2MA%3D%3D&utm_source=qr" style="--color: #60a5fa" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1GAhrShvqx/" style="--color: #1d4ed8" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+
+                <div class="copyright">
+                    &copy; 2026 Amir AZZAM. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Popup -->
+    <div class="success-popup-overlay" id="popupOverlay" onclick="closePopup()"></div>
+    <div class="success-popup" id="successPopup">
+        <h3>✓ Message Sent!</h3>
+        <p>Thank you for reaching out. I will review your message and respond within 24 hours.</p>
+        <button class="popup-close-btn" onclick="closePopup()">Close</button>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" onclick="scrollToTop()" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        // FIXED: PDF opening function without fetch (works for local files)
+        function openPDF(filename) {
+            // Simply try to open the PDF in a new tab
+            // The browser will show an error if the file doesn't exist
+            window.open(filename, '_blank');
+            
+            // Optional: Show a helpful message after a short delay
+            setTimeout(function() {
+                alert('If the PDF does not open, please make sure "' + filename + '" is in the same folder as this webpage.');
+            }, 1000);
+        }
+        
+        function toggleMobileMenu() {
+            var navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+        
+        function closeMobileMenu() {
+            var navLinks = document.getElementById('navLinks');
+            navLinks.classList.remove('active');
+        }
+        
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            closeMobileMenu();
+        }
+        
+        function downloadCV() {
+            alert('CV download feature will be available soon.');
+        }
+        
+        function handleSubmit() {
+            var name = document.querySelector('input[name="name"]').value;
+            var email = document.querySelector('input[name="email"]').value;
+            var message = document.querySelector('textarea[name="message"]').value;
+            
+            if (!name || !email || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            document.getElementById('popupOverlay').style.display = 'block';
+            document.getElementById('successPopup').style.display = 'block';
+            
+            document.querySelector('input[name="name"]').value = '';
+            document.querySelector('input[name="email"]').value = '';
+            document.querySelector('textarea[name="message"]').value = '';
+        }
+        
+        function closePopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+            document.getElementById('successPopup').style.display = 'none';
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        window.onscroll = function() {
+            var scrollBtn = document.getElementById('scrollToTop');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollBtn.style.display = 'block';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        };
+
+        // Add load event to images to remove any leftover placeholder styling
+        document.addEventListener('DOMContentLoaded', function() {
+            var images = document.querySelectorAll('img');
+            images.forEach(function(img) {
+                img.addEventListener('load', function() {
+                    // Image loaded successfully, remove any placeholder backgrounds
+                    this.style.background = 'transparent';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
